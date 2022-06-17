@@ -1,0 +1,18 @@
+{
+  "name": "markdown-editor",
+  "version": "1.0.0",
+  "description": "Real-Time Markdown Editor with Node.js",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon server.js"
+  },
+  "author": "Sakthivel S",
+  "license": "ISC",
+  "dependencies": {
+    "ejs": "^3.1.8",
+    "express": "^4.18.1",
+    "redis": "^4.1.0",
+    "share": "^0.6.3"
+  }
+}
