@@ -26,7 +26,7 @@ window.onload = function() {
             }
         });
 
-        var previousMarkdownValue;
+        // var previousMarkdownValue;
 
         // convert text area to markdown html
         var convertTextAreaToMarkdown = function(){
@@ -36,32 +36,32 @@ window.onload = function() {
             markdownArea.innerHTML = html;
         };
 
-        var didChangeOccur = function(){
-            if(previousMarkdownValue != pad.value){
-                return true;
-            }
-            return false;
-        };
+        // var didChangeOccur = function(){
+        //     if(previousMarkdownValue != pad.value){
+        //         return true;
+        //     }
+        //     return false;
+        // };
 
-        // check every second if the text area has changed
-        setInterval(function(){
-            if(didChangeOccur()){
-                convertTextAreaToMarkdown();
-            }
-        }, 1000);
+        // // check every second if the text area has changed
+        // setInterval(function(){
+        //     if(didChangeOccur()){
+        //         convertTextAreaToMarkdown();
+        //     }
+        // }, 1000);
 
         // convert textarea on input change
         pad.addEventListener('input', convertTextAreaToMarkdown);
 
-        // ignore if on home page
-        if(document.location.pathname.length > 1){
-            // implement share js
-            var documentName = document.location.pathname.substring(1);
-            sharejs.open(documentName, 'text', function(error, doc) {
-                doc.attach_textarea(pad);
-                convertTextAreaToMarkdown();
-            });
-        }
+        // // ignore if on home page
+        // if(document.location.pathname.length > 1){
+        //     // implement share js
+        //     var documentName = document.location.pathname.substring(1);
+        //     sharejs.open(documentName, 'text', function(error, doc) {
+        //         doc.attach_textarea(pad);
+        //         convertTextAreaToMarkdown();
+        //     });
+        // }
 
         // convert on page load
         convertTextAreaToMarkdown();

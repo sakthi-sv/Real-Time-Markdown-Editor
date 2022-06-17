@@ -19,9 +19,9 @@ app.get("/:id", function (req, res) {
 // console.log(process.env.REDISTOGO_URL);
 // redisClient = require("redis");
 
-var options = {
-  db: { type: 'redis' }
-};
+// var options = {
+//   db: { type: 'redis' }
+// };
 
 // sharejs.server.attach(app, options);
 
